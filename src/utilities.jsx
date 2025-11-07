@@ -1,7 +1,8 @@
 import hsk from "./data/hsk.json";
 
-export function setHanziPairs({ count, diffLevel }) {
+export function setHanziPairs(count, diffLevel) {
     return hsk
-        .filter(({ level }, index) => level === diffLevel && index < count)
-        .map(({ pinyin, hanzi }) => ({ pinyin: pinyin, hanzi: hanzi }));
+        .filter(({ level }) => level === diffLevel)
+        .slice(0, count)
+        .map(({ pinyin, hanzi }) => ({ pinyin, hanzi}));
 }
