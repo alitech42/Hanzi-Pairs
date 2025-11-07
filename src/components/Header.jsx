@@ -4,5 +4,5 @@ export function Header() {
             <h1>Hanzi Pairs</h1>
             <p>Score: 0</p>
         </header>
-    )
+    );
 }

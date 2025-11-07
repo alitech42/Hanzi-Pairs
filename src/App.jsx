@@ -4,7 +4,7 @@ import { setHanziPairs } from "./utilities";
 import { PinyinCardContainer } from "./components/PinyinCardContainer";
 import { Header } from "./components/Header";
 
-import './App.css'
+import "./App.css";
 
 export function App() {
     const [hanziPairs, handleHanziPairs] = useState(setHanziPairs(5, 1));
