@@ -1,0 +1,25 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  text-align: center;
+}
+
+.card > button {
+  font-size: xx-large;
+  width: 50%;
+  height: 18rem;
+}
+
+hr {
+  margin: 2rem;
+}
+
