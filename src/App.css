@@ -1,6 +1,35 @@
+:root {
+  /* primary */
+  --red: hsl(8, 78%, 56%);
+  --cyan-green: hsl(162, 38%, 45%);
+  --indigo: hsl(220, 48%, 38%);
+
+  /* secondary */
+  --amber: hsl(38, 88%, 60%);
+  --lotus-pink: hsl(340, 35%, 77%);
+  --light-green: hsl(150, 25%, 70%);
+
+  /* neutral */
+  --rice-white: hsl(48, 45%, 95%);
+  --mist-gray: hsl(0, 0%, 72%);
+  --black: hsl(220, 15%, 12%);
+}
+
+
+body {
+  margin: 0;
+  color: var(--rice-white);
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
+
+}
+
+.app-container > div {
+  padding: 2rem;
+  background-color: var(--cyan-green);
 }
 
 .container {
@@ -17,9 +46,28 @@
   font-size: xx-large;
   width: 50%;
   height: 18rem;
+  background-color: var(--indigo);
+  color: var(--rice-white);
+}
+
+.card > button:hover {
+  background-color: var(--amber);
 }
 
 hr {
   margin: 2rem;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--red);
+  padding: 2rem;
+  
+}
+
+header > p {
+  font-size: x-large
+}
