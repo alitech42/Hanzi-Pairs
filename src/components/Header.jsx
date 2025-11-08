@@ -1,8 +1,8 @@
-export function Header() {
+export function Header({score}) {
     return (
         <header>
             <h1>Hanzi Pairs</h1>
-            <p>Score: 0</p>
+            <p>Score: {score}</p>
         </header>
     );
 }

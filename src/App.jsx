@@ -12,6 +12,7 @@ export function App() {
         pinyin: "",
         hanzi: "",
     });
+    const [score, handleScore] = useState(0);
 
     function selectCard(e, type) {
         handleSelectedCard((prev) => ({
@@ -25,9 +26,11 @@ export function App() {
     useEffect(() => {
         if (selectedCard.hanzi && selectedCard.pinyin) {
             if (checkHanziPairs(selectedCard)) {
-                console.log("cool");
+                handleScore((prev) => prev + 1);
+                console.log(score);
             } else {
-                console.log("not so cool");
+                console.log(score);
+                handleScore(0);
             }
             handleSelectedCard({ pinyin: "", hanzi: "" });
         }
@@ -35,7 +38,7 @@ export function App() {
 
     return (
         <div className="app-container">
-            <Header />
+            <Header score={score} />
             <div>
                 <HanziCardContainer
                     data={hanziPairs}
