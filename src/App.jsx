@@ -29,6 +29,7 @@ export function App() {
             } else {
                 console.log("not so cool");
             }
+            handleSelectedCard({ pinyin: "", hanzi: "" });
         }
     }, [selectedCard]);
 
