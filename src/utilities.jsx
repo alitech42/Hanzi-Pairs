@@ -12,7 +12,11 @@ export function setHanziPairs(count, diffLevel) {
         .filter((item, index) =>
             randomIndexArr.some((randomIndex) => randomIndex === index)
         )
-        .map(({ pinyin, hanzi }) => ({ pinyin, hanzi }));
+        .map(({ pinyin, hanzi }) => ({
+            pinyin,
+            hanzi,
+            order: Math.floor(Math.random() * count),
+        }));
 }
 
 export function checkHanziPairs(selectedCard) {
