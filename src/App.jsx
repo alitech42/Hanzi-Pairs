@@ -27,10 +27,9 @@ export function App() {
         if (selectedCard.hanzi && selectedCard.pinyin) {
             if (checkHanziPairs(selectedCard)) {
                 handleScore((prev) => prev + 1);
-                console.log(score);
             } else {
-                console.log(score);
                 handleScore(0);
+                handleHanziPairs(setHanziPairs(5, 1));
             }
             handleSelectedCard({ pinyin: "", hanzi: "" });
         }
