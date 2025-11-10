@@ -58,7 +58,11 @@ export function App() {
 
     return (
         <div className="app-container">
-            <Header score={score} handleDiffLevel={changeDiffLevel} />
+            <Header
+                score={score}
+                handleDiffLevel={changeDiffLevel}
+                currentDiffLevel={diffLevel}
+            />
             <div>
                 <HanziCardContainer
                     data={hanziPairs}

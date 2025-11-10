@@ -1,8 +1,10 @@
-export function DiffButton({ diffLevel, handleDiffLevel }) {
+export function DiffButton({ diffLevel, handleDiffLevel, currentDiffLevel }) {
     return (
         <button
             type="button"
-            className="diffBtn"
+            className={`difficulty-button ${
+                diffLevel === currentDiffLevel ? "selected" : ""
+            }`}
             onClick={() => handleDiffLevel(diffLevel)}
         >
             {diffLevel}

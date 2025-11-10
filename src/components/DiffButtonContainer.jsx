@@ -1,14 +1,38 @@
 import { DiffButton } from "./diffButton";
 
-export function DiffButtonContainer({ handleDiffLevel }) {
+export function DiffButtonContainer({ handleDiffLevel, currentDiffLevel }) {
     return (
-        <div>
-            <DiffButton diffLevel={1} handleDiffLevel={handleDiffLevel} />
-            <DiffButton diffLevel={2} handleDiffLevel={handleDiffLevel} />
-            <DiffButton diffLevel={3} handleDiffLevel={handleDiffLevel} />
-            <DiffButton diffLevel={4} handleDiffLevel={handleDiffLevel} />
-            <DiffButton diffLevel={5} handleDiffLevel={handleDiffLevel} />
-            <DiffButton diffLevel={6} handleDiffLevel={handleDiffLevel} />
+        <div className="difficulty-button-container">
+            <DiffButton
+                diffLevel={1}
+                handleDiffLevel={handleDiffLevel}
+                currentDiffLevel={currentDiffLevel}
+            />
+            <DiffButton
+                diffLevel={2}
+                handleDiffLevel={handleDiffLevel}
+                currentDiffLevel={currentDiffLevel}
+            />
+            <DiffButton
+                diffLevel={3}
+                handleDiffLevel={handleDiffLevel}
+                currentDiffLevel={currentDiffLevel}
+            />
+            <DiffButton
+                diffLevel={4}
+                handleDiffLevel={handleDiffLevel}
+                currentDiffLevel={currentDiffLevel}
+            />
+            <DiffButton
+                diffLevel={5}
+                handleDiffLevel={handleDiffLevel}
+                currentDiffLevel={currentDiffLevel}
+            />
+            <DiffButton
+                diffLevel={6}
+                handleDiffLevel={handleDiffLevel}
+                currentDiffLevel={currentDiffLevel}
+            />
         </div>
     );
 }

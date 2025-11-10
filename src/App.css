@@ -92,3 +92,7 @@ header > p {
 .difficulty-button:hover {
     background-color: var(--amber);
 }
+
+.selected {
+    background-color: var(--amber);
+}
