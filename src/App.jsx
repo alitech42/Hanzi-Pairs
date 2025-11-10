@@ -7,7 +7,10 @@ import { Header } from "./components/Header";
 import "./App.css";
 
 export function App() {
-    const [hanziPairs, handleHanziPairs] = useState(setHanziPairs(5, 1));
+    const [diffLevel, handleDiffLevel] = useState(1);
+    const [hanziPairs, handleHanziPairs] = useState(
+        setHanziPairs(5, diffLevel)
+    );
     const [selectedCard, handleSelectedCard] = useState({
         pinyin: "",
         hanzi: "",
@@ -21,8 +24,17 @@ export function App() {
         }));
     }
 
-    useEffect(() => console.log(selectedCard), [selectedCard]);
+    function changeDiffLevel(diffLevel) {
+        handleDiffLevel(diffLevel);
+    }
+
+    useEffect(() => console.log(diffLevel), [diffLevel]);
     useEffect(() => console.log(hanziPairs), [hanziPairs]);
+
+    useEffect(() => {
+        handleHanziPairs(setHanziPairs(5, diffLevel));
+        handleScore(0);
+    }, [diffLevel]);
 
     useEffect(() => {
         if (selectedCard.hanzi && selectedCard.pinyin) {
@@ -33,19 +45,20 @@ export function App() {
                 );
             } else {
                 handleScore(0);
-                handleHanziPairs(setHanziPairs(5, 1));
+                handleHanziPairs(setHanziPairs(5, diffLevel));
             }
             handleSelectedCard({ pinyin: "", hanzi: "" });
         }
     }, [selectedCard]);
 
     useEffect(() => {
-        if (hanziPairs.length === 0) handleHanziPairs(setHanziPairs(5, 1));
+        if (hanziPairs.length === 0)
+            handleHanziPairs(setHanziPairs(5, diffLevel));
     }, [hanziPairs]);
 
     return (
         <div className="app-container">
-            <Header score={score} />
+            <Header score={score} handleDiffLevel={changeDiffLevel} />
             <div>
                 <HanziCardContainer
                     data={hanziPairs}
