@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export function HanziCard({ hanzi, handleClick, selectedHanzi }) {
     return (
         <div className="hanzi card">

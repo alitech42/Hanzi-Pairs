@@ -28,9 +28,6 @@ export function App() {
         handleDiffLevel(diffLevel);
     }
 
-    useEffect(() => console.log(diffLevel), [diffLevel]);
-    useEffect(() => console.log(hanziPairs), [hanziPairs]);
-
     useEffect(() => {
         handleHanziPairs(setHanziPairs(5, diffLevel));
         handleScore(0);
