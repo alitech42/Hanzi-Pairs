@@ -58,11 +58,17 @@ hr {
 
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color: var(--red);
     padding: 2rem;
+}
+
+@media (min-width: 760px) {
+    header {
+        flex-direction: row;
+    }
 }
 
 header > p {
@@ -80,13 +86,20 @@ header > p {
 }
 
 .difficulty-button {
-    width: 3rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 3rem;
     border-radius: 15px;
     border: none;
     font-size: large;
     background-color: var(--rice-white);
     color: var(--black);
+}
+
+@media (min-width: 760px) {
+    .difficulty-button {
+        width: 3rem;
+        height: 2rem;
+    }
 }
 
 .difficulty-button:hover {
