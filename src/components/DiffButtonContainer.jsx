@@ -1,4 +1,4 @@
-import { DiffButton } from "./diffButton";
+import { DiffButton } from "./DiffButton";
 
 export function DiffButtonContainer({ handleDiffLevel, currentDiffLevel }) {
     return (
