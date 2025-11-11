@@ -130,4 +130,5 @@ header > p {
 
 .selected {
     background-color: var(--amber);
+    transform: scale(1.2);
 }
