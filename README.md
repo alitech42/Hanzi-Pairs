@@ -1,16 +1,75 @@
-# React + Vite
+# Hanzi Pairs 🀄
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hanzi Pairs is a memory-matching game built with React that helps users practice matching **Chinese Hanzi characters with their Pinyin equivalents**.  
+The game focuses on logic, state management, and clean UI interactions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎮 Features
 
-## React Compiler
+- Match **Hanzi ↔ Pinyin** card pairs
+- Multiple **difficulty levels**
+- **Dynamic score** tracking
+- Randomized card order each round
+- Correctly matched pairs are removed
+- Cards reset after incorrect matches
+- Responsive layout for smaller screens
+- Visual feedback for selected and matched cards
+- Smooth UI animations
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React (JavaScript)**
+- **CSS**
+- **Vite**
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/your-username/hanzi-pairs.git
+cd hanzi-pairs
+npm install
+```
+
+Then run the project locally
+
+```bash
+npm run dev
+```
+
+Open your browser at "https/localhost:5173"
+
+---
+
+## 🧠 How the Game Works
+
+1. A random set of Hanzi–Pinyin pairs is selected from the data.
+2. Cards are shuffled and displayed.
+3. The player selects two cards:
+   * ✅ If they match, the cards are removed and the score increases
+   * ❌ If they don’t match, the cards reset
+4. When all pairs are matched, a new round begins. 
+
+---
+
+## 📚 What I Learned
+
+* Managing state and game logic in React
+
+* Handling user interactions and conditional rendering
+
+* Structuring a React project for readability
+
+* Implementing randomization and matching logic
+
+* Incremental development using Git commits
