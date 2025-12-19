@@ -1,6 +1,7 @@
 # Hanzi Pairs 🀄
 
-![Hanzi Pairs gameplay](<img width="1920" height="1062" alt="HanziPairs gameplay" src="https://github.com/user-attachments/assets/445f31da-3931-4c55-93f1-8d6e1a0d0fd2" />)
+[![Hanzi Pairs gameplay](https://github.com/user-attachments/assets/445f31da-3931-4c55-93f1-8d6e1a0d0fd2)](https://hanzipairs.netlify.app/)
+
 
 Hanzi Pairs is a memory-matching game built with React that helps users practice matching **Chinese Hanzi characters with their Pinyin equivalents**.  
 The game focuses on logic, state management, and clean UI interactions.
